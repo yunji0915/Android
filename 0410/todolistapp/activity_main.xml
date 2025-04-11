@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 할일 입력 필드 -->
+    <EditText
+        android:id="@+id/taskInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="할 일을 입력하세요"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"/>
+
+    <!-- 할일 추가 버튼 -->
+    <Button
+        android:id="@+id/addTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="추가"
+        android:layout_below="@id/taskInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <!-- 할일 목록을 위한 ScrollView -->
+    <ScrollView
+        android:id="@+id/taskListScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/addTaskButton"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true">
+
+        <!-- 동적으로 추가되는 할일 항목들이 담길 LinearLayout -->
+        <LinearLayout
+            android:id="@+id/taskListContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
